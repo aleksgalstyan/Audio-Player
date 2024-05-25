@@ -12,11 +12,40 @@
 <body>
     <script src="script.js"></script>
     <div class="main">
-
+        
+        
+    </div>
+    <div class="library">
+        <div class="song-list">
+            <div class="song-item" onclick="playSelectedSong(0)">
+                <img src="https://i1.sndcdn.com/artworks-85PlUljfKOQkBsUX-1EOWyw-t500x500.jpg">
+                <span>LONOWN-Sleepwalker</span>
+            </div>
+            <div class="song-item" onclick="playSelectedSong(1)">
+                <img src= "https://images.hdqwalls.com/wallpapers/desert-moon-4k-lk.jpg">
+                <span> Xatuba-Karavan</span>
+            </div>
+            <div class="song-item" onclick="playSelectedSong(2)">
+                <img src= "images/hayqajer.jpeg">
+                <span> Xatuba-Hay qajer</span>
+            </div>
+            <div class="song-item" onclick="playSelectedSong(3)">
+                <img src="https://courtneyssoundworld.files.wordpress.com/2015/05/kate-bush.gif">
+                <span>Kate Bush-Army Dreamers</span>
+            </div>
+            <div class="song-item" onclick="playSelectedSong(4)">
+                <img src= "https://steamuserimages-a.akamaihd.net/ugc/1710790339046332398/028D5D04D44A698B4F16646088BA844A5493EC1F/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true">
+                <span> Orange-Sector - Farben</span>
+            </div>
+            
+            <!-- Add more song items here -->
+        </div>
     </div>
     <div class="player">
-        <div class="row1">
 
+
+        <div class="row1" id="row1">
+            
         </div>
         <div id="songtitle">
             Title
@@ -28,23 +57,22 @@
                 <img src="images/angle-right.png" id="next" onclick="next()">
             </div>
             <div class="seek-bar">
+                <!-- <input type="range" min="0" max="100" step="1" class="time-slider" id="time-slider" onchange="changeTime()"> -->
                 <div class="handle">
                     <div class="fill">
-
+                        
                     </div>
-
                 </div>
             </div>
 
             <div class="mute">
 
                 <div class="currentTime">00:00/00:00</div>
-                <div class="mutebuttons">
-                    <img src="images/volume-down.png" id="decrease">
-                    <img src="images/volume.png" id="mute">
-                    <img src="images/increase-volume.png" id="increase">
+                <div class="volume-slider">
+                    <input type="range" min="0" max="1" step="0.01" value="1" class="slider" id="volume-slider" onchange="adjustVolume()">
                 </div>
-
+                <img src="images/volume.png" id="mute" onclick="mute()">
+                
             </div>
         </div>
     </div>
